@@ -1,0 +1,37 @@
+#meu-botao {
+  background-color: #656AA6;
+  border-color: #656AA6;
+}
+#meu-botao2 {
+  background-color: #ffff;
+  border-color: #656AA6;
+}
+
+#containerCadastro {
+
+  background-color: #656AA6;
+  width: auto;
+  height: auto;
+
+}
+
+#botoes {
+  background-color: #656AA6;
+  align-items: center;
+  height: 98px;
+  width: 210px;
+  border-radius: 15px;
+  margin-left: 10px;
+}
+#img botoes {
+  width: 10px;
+}
+
+#botoes2 {
+  background-color: #656AA6;
+  align-items: center;
+  height: 98px;
+  width: 250px;
+  border-radius: 20px;
+  margin-left: 20px;
+}
