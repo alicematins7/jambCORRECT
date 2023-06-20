@@ -28,7 +28,8 @@ Route::get('/adocao', function () {
 Route::get('/favoritos', function () {
     return view('sistema.favoritos');
 });
-
+/*
 Route::get('/login', function () {
     return view('sistema.login');
 });
+*/

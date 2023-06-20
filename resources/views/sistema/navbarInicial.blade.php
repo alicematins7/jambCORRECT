@@ -8,10 +8,13 @@
     <div class="collapse navbar-collapse justify-content-end" id="conteudoNavbarSuportado">
         <ul class="navbar-nav mr-auto flex-column flex-sm-row">
         </ul>
+        <a href="{{route('login')}}">
+            <button class="btn btn-primary my-2 my-sm-0"; id = "meu-botao" type="submit" style="margin-right: 15px; margin-left: 15px">Login</button>
+        </a>
         <a href="{{route('register')}}">
             <button class="btn btn-primary my-2 my-sm-0"; id = "meu-botao" type="submit" style="margin-right: 15px; margin-left: 15px">Cadastrar</button>
         </a>
-        <a href="{{route('login')}}">
+        <a href="{{route('register')}}">
           <button class="btn btn-primary my-2 my-sm-0"; id= "meu-botao" type="submit" style="margin-right: 15px">Entrar</button>
         </a>
         <a href="/favoritos">
