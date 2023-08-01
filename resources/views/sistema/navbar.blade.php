@@ -31,5 +31,8 @@
         <a href="/favoritos">
           <button class="btn btn-primary my-2 my-sm-0"; id= "meu-botao" type="submit" style="margin-right: 15px">Favoritos</button>
         </a>
+        <a href="/cadastro">
+          <button class="btn btn-primary my-2 my-sm-0"; id= "meu-botao" type="submit" style="margin-right: 15px">Cadastro de Animais</button>
+        </a>
     </div>
 </nav>    

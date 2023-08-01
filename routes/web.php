@@ -28,6 +28,9 @@ Route::get('/adocao', function () {
 Route::get('/favoritos', function () {
     return view('sistema.favoritos');
 });
+Route::get('/cadastro', function () {
+    return view('sistema.cadastro');
+});
 /*
 Route::get('/login', function () {
     return view('sistema.login');
