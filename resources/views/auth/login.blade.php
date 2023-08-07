@@ -1,26 +1,6 @@
-@extends('layouts.app')
+@extends('sistema.layout')
 @section('content')
 
-    <nav class="navbar flex-column flex-sm-row navbar-expand-lg">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="/">
-        <img src="{{asset('storage/imagens/logo.png')}}" style="width:80px; height: 80px; margin-left: 15px">
-        </a>
-        <div class="Margin">
-            <div class="container" style="margin-top: 50px; background-color:#656AA6">
-            </div>
-        </div>
-        <div class="collapse navbar-collapse justify-content-end" id="conteudoNavbarSuportado">
-            <a href="/adocao">
-            <button class="btn btn-primary my-2 my-sm-0"; id= "meu-botao" type="submit" style="margin-right: 15px">Adoções</button>
-            </a>
-            <a href="/favoritos">
-            <button class="btn btn-primary my-2 my-sm-0"; id= "meu-botao" type="submit" style="margin-right: 15px">Favoritos</button>
-            </a>
-        </div>
-    </nav>  
 
     <div class="row">
         <div class="col-sm-5">

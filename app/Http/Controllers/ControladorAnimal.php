@@ -11,8 +11,8 @@ class ControladorAnimal extends Controller
      */
     public function index()
     {
-        $animais = Animal::all();
-        return view ('index', compact('animais'));
+        $posts = Animal::all();
+        return view ('index', compact('posts'));
     }
 
     /**
@@ -29,16 +29,16 @@ class ControladorAnimal extends Controller
     public function store(Request $request)
     {
         $path = $request -> file('arquivo')->store('imagens', 'public');
-        $animal = new Foto () ;
-        $animal ->  nome = $request -> input ('nome');
-        $animal -> idade = $request -> input ('idade');
-        $animal -> especie = $request -> input ('especie');
-        $animal -> raca = $request -> input ('raca');
-        $animal -> sexo = $request -> input ('sexo');
-        $animal -> porte = $request -> input ('porte');
-        $animal -> sobre = $request -> input ('sobre');
-        $animal -> arquivo = $path ;
-        $animal -> save () ;
+        $post = new Animal () ;
+        $post ->  nome = $request -> input ('nome');
+        $post -> idade = $request -> input ('idade');
+        $post -> especie = $request -> input ('especie');
+        $post -> raca = $request -> input ('raca');
+        $post -> sexo = $request -> input ('sexo');
+        $post -> porte = $request -> input ('porte');
+        $post -> sobre = $request -> input ('sobre');
+        $post -> arquivo = $path ;
+        $post -> save () ;
         return redirect('/');
     }
 
@@ -71,11 +71,11 @@ class ControladorAnimal extends Controller
      */
     public function destroy(string $id)
     {
-        $animal = Foto::find($id);
+        $post = Animal::find($id);
         if(isset($aninal)){
-            $arquivo = $animal -> arquivo;
+            $arquivo = $post -> arquivo;
             Storage::disk ('public')->delete($arquivo) ;
-            $animal->delete () ;
+            $post->delete () ;
         }
     return redirect('/');
     }

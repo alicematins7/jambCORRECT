@@ -7,9 +7,12 @@
     <title>@yield('title')</title>
     @vite(['resources/js/app.js'])
 </head>
-<body>
+<header>
     @component('sistema.navbarInicial')
     @endcomponent
+</header>
+<body>
+    
     <main role="main" class="py-4">
         @hasSection('content')
             @yield('content')
