@@ -8,7 +8,7 @@
         </div>
         <div class="col-sm-7" style="background-color: #656AA6">
             <div class="container">
-            <p class="h4 text-center" style="color: white; margin-top: 75px; font-size: 30px"><b>Faça Login em sua conta para continuar o processo de adoção</b></p>
+            <p class="h4 text-center" style="color: white; margin-top: 75px; font-size: 30px"><b>Login</b></p>
             <form method="POST" action="{{ route('login') }}">
                 @csrf
                 <div class="row mb-3">        

@@ -17,22 +17,20 @@ Route::get('/', function () {
     return view('sistema.index');
 });
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::get('/adocao', function () {
-    return view('sistema.adocao');
-});
-
 Route::get('/favoritos', function () {
     return view('sistema.favoritos');
 });
+
+Route::get('/formulário', function () {
+    return view('sistema.formulário');
+});
+
+Auth::routes();
+
 Route::get('/cadastro', function () {
     return view('sistema.cadastro');
 });
-/*
-Route::get('/login', function () {
-    return view('sistema.login');
-});
-*/
+
+Route::get ('/cadastroanimal', [App\Http\Controllers\ControladorAnimal :: class, 'index' ]);
+Route :: post ('/registroAnimal', [ App\Http\Controllers\ControladorAnimal :: class , 'store']) ;
+Route :: delete ('/{ id }', [ App\Http\Controllers\ControladorAnimal :: class , 'destroy']) ;

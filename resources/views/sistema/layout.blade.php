@@ -8,7 +8,7 @@
     @vite(['resources/js/app.js'])
 </head>
 <header>
-    @component('sistema.navbarInicial')
+    @component('sistema.navbar')
     @endcomponent
 </header>
 <body>

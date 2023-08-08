@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use App\Models\Animal;
 
 class ControladorAnimal extends Controller
 {
@@ -12,7 +14,7 @@ class ControladorAnimal extends Controller
     public function index()
     {
         $posts = Animal::all();
-        return view ('index', compact('posts'));
+        return view ('cadastro', compact('posts'));
     }
 
     /**
@@ -72,7 +74,7 @@ class ControladorAnimal extends Controller
     public function destroy(string $id)
     {
         $post = Animal::find($id);
-        if(isset($aninal)){
+        if(isset($post)){
             $arquivo = $post -> arquivo;
             Storage::disk ('public')->delete($arquivo) ;
             $post->delete () ;

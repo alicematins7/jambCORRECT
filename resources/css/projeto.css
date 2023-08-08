@@ -1,10 +1,10 @@
 #meu-botao {
-  background-color: #656AA6;
-  border-color: #656AA6;
+  background-color: #321EB1;
+
 }
 #meu-botao2 {
   background-color: #ffff;
-  border-color: #656AA6;
+
 }
 
 #containerCadastro {
@@ -16,22 +16,27 @@
 }
 
 #botoes {
-  background-color: #656AA6;
+  background-color: #454545;
   align-items: center;
-  height: 98px;
-  width: 210px;
-  border-radius: 15px;
-  margin-left: 10px;
+  height: 60px;
+  width: 250px;
+  border-radius: 20px;
+  margin-left: 20px;
 }
 #img botoes {
   width: 10px;
 }
 
 #botoes2 {
-  background-color: #656AA6;
+  background-color: #321EB1;
   align-items: center;
-  height: 98px;
+  height: 60px;
   width: 250px;
   border-radius: 20px;
   margin-left: 20px;
+}
+
+#hr {
+  height: 60px;
+  width: 250px;
 }

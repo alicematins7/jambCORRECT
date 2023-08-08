@@ -3,9 +3,9 @@
 
 
     <div class="containerCadastro">
-        <div class="col-sm-12" style="background-color: #656AA6" style="width: auto height: 400px">
+        <div class="col-sm-12" style="background-color: #000" style="width: auto height: 400px">
             <div class="container" style="margin-top: 150px" style="">
-            <p class="h4 text-center" style="color: white; margin-top: 20px; font-size: 30px"><b>Cadastre-se para continuar</b></p>
+            <p class="h4 text-center" style="color: #2B1998; margin-top: 20px; font-size: 30px"><b>Cadastre-se </b></p>
             <form method="POST" action="{{ route('register') }}">
                 @csrf
                         <div class="row mb-3" style="margin-top: 30px">
@@ -22,6 +22,14 @@
                                     </span>
                                 @enderror
                             </div>
+                            <div class="col-md-4">
+                                <input id="sobrenome" type="text" class="form-control @error('sobrenome') is-invalid @enderror" name="sobrenome" value="{{ old('sobrenome') }}" required autocomplete="name" autofocus placeholder="Sobrenome">
+                                @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
                         </div>
                         <div class="row mb-3" style="margin-top: 30px">
                             <label for="name" class="col-md-4 col-form-label text-md-end">
@@ -30,7 +38,7 @@
                                 </i>
                             </label>
                             <div class="col-md-4">
-                                <input id="endereco" type="text" class="form-control @error('endereco') is-invalid @enderror" name="endereco" value="{{ old('endereco') }}" required autocomplete="name" autofocus placeholder="Nome">
+                                <input id="endereco" type="text" class="form-control @error('endereco') is-invalid @enderror" name="endereco" value="{{ old('endereco') }}" required autocomplete="Endereço" autofocus placeholder="Endereço">
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -38,9 +46,6 @@
                                 @enderror
                             </div>
                         </div>
-
-
-
                         <div class="row mb-3">
                             <label for="email" class="col-md-4 col-form-label text-md-end">
                                 <i class="bi bi-envelope-fill">
@@ -79,21 +84,7 @@
 
                         <div class="row mb-3">
                             <label for="confirm-password" class="col-md-4 col-form-label text-md-end">
-                                <i>
-                                    <img src="{{asset('storage/imagens/key-fill.svg')}}" />
-                                </i>
                             </label>
-
-                            <div class="col-md-4">
-                                <input id="confirm-password" type="password" class="form-control @error('password') is-invalid @enderror" name="confirm-password" required placeholder="Confirmar senha">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
                         <div class="h5 text-center">
                             <p style="color: white" id="titulo"><b>Já tem uma conta? <a style="color: white" href="{{route('login')}}">Faça Login</a></b></p>
                         </div>
@@ -105,4 +96,5 @@
             </div>
         </div>        
     </div>
+    
 @endsection
